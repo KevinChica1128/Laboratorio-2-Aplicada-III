@@ -3,6 +3,7 @@
 # Laboratorio 2 - Aplicada III
 # Datos Importaciones
 
+install.packages("far")
 install.packages("ade4")
 #base de datos
 importaciones=read.table("clipboard",header=T,row.names =1)
@@ -129,7 +130,7 @@ valp=diag(t(P)%*%as.matrix(P)*(1/20)) #valores propios
 #**ACP-NIPALS(VARIABLES) MANUAL
 PV=ACP_NIPALS(importaciones,20,6,1,0) #componentes principales
 TV=ACP_NIPALS(importaciones,20,6,0,0) #vectores propios
-valpV=diag(t(P)%*%as.matrix(P)*(1/20)) #valores propios
+valpV=diag(t(PV)%*%as.matrix(PV)*(1/20)) #valores propios
 #****ACP NO MANUAL (ADE4)
 library(ade4)
 #**ACP(INDIVIDUOS)
@@ -139,3 +140,120 @@ acpnipals$c1 #vectores propios primeras 2 dim
 acpnipals$eig #valores propios
 #**ACP(VARIABLES)
 #?????
+
+
+
+#ACP MANUAL DATOS FALTANTES (NIPALS)
+ACP_NIPALSNA=function(datos,n,p){
+  library("far")
+  njm=colMeans(datos,na.rm=TRUE); njs=colSums(datos,na.rm=TRUE)
+  nj=njs/njm
+  X=scale(datos)*sqrt(nj/(nj-1))
+  X0=X
+  P=matrix(NA,p,p); T=matrix(NA,n,p)
+  P1i=matrix(NA,p,1)
+  for(h in 1:p){
+    
+    t1=X0[,1]
+    
+    for(i in 1:100){
+      
+      for(j in 1:p){
+        
+        j1 =na.omit(cbind(X0[,j],t1))
+        P1i[j]=sum(j1[,1]*j1[,2])/sum(j1[,2]^2)
+      }
+      P[,h]=P1i
+      Portn=orthonormalization(P[,1:h]); P1=Portn[,h]
+      for(i in 1:n){
+        
+        i1=na.omit(cbind(X0[i,],P1))
+        t1[i]=sum(i1[,1]*i1[,2])/sum(i1[,2]^2)
+      }
+      T[,h]=t1
+      Tortg=orthonormalization(T[,1:h],norm=FALSE); t1=Tortg[,h]
+    } # end i
+    P[,h]=P1
+    T[,h]=t1
+    X1=X0-t1%*%t(P1); X0=X1
+  } # end h
+  
+  L=diag(t(T)%*%T)/n
+  r.nipNA=list(T,P,L); return(r.nipNA)
+} 
+#**ACP martriz al 5%
+ACP_NIPALSNA(importaciones_1,20,6)
+#**ACP martriz al 10%
+ACP_NIPALSNA(importaciones_2,20,6)
+#**ACP martriz al 15%
+ACP_NIPALSNA(importaciones_3,20,6)
+#**ACP martriz al 20%
+ACP_NIPALSNA(importaciones_4,20,6)
+#****ACP NO MANUAL (ADE4)
+library("ade4")
+#**ACP martriz al 5%
+acpnipals5NA<-nipals(importaciones_1)
+acpnipals5NA$li #Coordenadas de los individuos
+acpnipals5NA$co #Coordenadas de las variables
+acpnipals5NA$tab #Matriz con los valores faltantes estimados
+acpnipals5NA$eig #Valores propios
+#**ACP martriz al 10%
+acpnipals10NA<-nipals(importaciones_2)
+acpnipals10NA$li #Coordenadas de los individuos
+acpnipals10NA$co #Coordenadas de las variables
+acpnipals10NA$tab #Matriz con los valores faltantes estimados
+acpnipals10NA$eig #Valores propios
+#**ACP martriz al 15%
+acpnipals15NA<-nipals(importaciones_3)
+acpnipals15NA$li #Coordenadas de los individuos
+acpnipals15NA$co #Coordenadas de las variables
+acpnipals15NA$tab #Matriz con los valores faltantes estimados
+acpnipals15NA$eig #Valores propios
+#**ACP martriz al 20%
+acpnipals20NA<-nipals(importaciones_4)
+acpnipals20NA$li #Coordenadas de los individuos
+acpnipals20NA$co #Coordenadas de las variables
+acpnipals20NA$tab #Matriz con los valores faltantes estimados
+acpnipals20NA$eig #Valores propios
+
+
+#--------------------------------------------------------#
+#ACP EM 
+#FUNCIÓN PARA REEMPLAZAR DATOS FALTANTES POR VALORES INICIALES
+reempNA=function(datos,n,p){
+  X0=datos
+  for (i in 1:p) {
+    for (j in 1:n) {
+      if(is.na(X0[j,i])=='TRUE'){
+        X0[j,i]=mean(X0[,i],na.rm = 'TRUE')
+    }
+  }
+  }
+  return(X0)
+}
+
+#Función algoritmo ACP EM
+ACPEM=function(datos,n,p){
+  datos
+  L=0
+  X0=reempNA(datos,n,p)
+  ZL=matrZ(X0,n,p)
+  for (L in 0:100) {
+    VL=ACP_manual(ZL,n,p,2,1)$vectors  #Matriz de vectores propios
+    CL=ACP_manual(ZL,n,p,3,1)          #Componentes principales
+    ZL=CL%*%VL                         #Reconstitucion de la matriz
+  }
+  result=list(VL,CL,X0)
+  return(result)
+}
+
+
+#**ACP EM matriz al 5%
+ACPEM(importaciones_1,20,6)
+#**ACP EM matriz al 10%
+ACPEM(importaciones_2,20,6)
+#**ACP EM matriz al 15%
+ACPEM(importaciones_3,20,6)
+#**ACP EM matriz al 20%
+ACPEM(importaciones_4,20,6)
+

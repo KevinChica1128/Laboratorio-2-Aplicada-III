@@ -1,0 +1,51 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Gonzales}{2014}{Vic}
+Gonzales, V.~M.  \harvardyearleft 2014\harvardyearright , ANÁLISIS CONJUNTO DE
+  MÚLTIPLES TABLAS DE DATOS MIXTOS MEDIANTE PLS, PhD thesis, UNIVERSITAT
+  POLITÉCNICA DE CATALUNYA, Barcelona.
+
+\harvarditem{Kassambara \harvardand\ Mundt}{2017}{FE}
+Kassambara, A. \harvardand\ Mundt, F.  \harvardyearleft 2017\harvardyearright ,
+  {\em factoextra: Extract and Visualize the Results of Multivariate Data
+  Analyses}.
+\newblock R package version 1.0.5.
+\newline\harvardurl{https://CRAN.R-project.org/package=factoextra}
+
+\harvarditem[L\^e et~al.]{L\^e, Josse \harvardand\ Husson}{2008}{FMR}
+L\^e, S., Josse, J. \harvardand\ Husson, F.  \harvardyearleft
+  2008\harvardyearright , `{FactoMineR}: A package for multivariate analysis',
+  {\em Journal of Statistical Software} {\bf 25}(1),~1--18.
+
+\harvarditem{Ludovic~Lebart}{1995}{Leb}
+Ludovic~Lebart, Alain~Morineau, M.~P.  \harvardyearleft 1995\harvardyearright ,
+  {\em Statistique exploratoire multidimensionnelle}, Dunod, Paris.
+
+\harvarditem{Ochoa}{2018}{Ochoa}
+Ochoa, A.~F.  \harvardyearleft 2018\harvardyearright , Análisis de
+  correspondencias múltiples en presencia de datos faltantes: el principio de
+  datos disponibles del algoritmo nipals (acmpdd), Master's thesis, Universidad
+  del Valle.
+
+\harvarditem{{R Core Team}}{2017}{R}
+{R Core Team}  \harvardyearleft 2017\harvardyearright , {\em R: A Language and
+  Environment for Statistical Computing}, R Foundation for Statistical
+  Computing, Vienna, Austria.
+\newline\harvardurl{https://www.R-project.org/}
+
+\harvarditem{Wickham}{2009}{ggp2}
+Wickham, H.  \harvardyearleft 2009\harvardyearright , {\em ggplot2: Elegant
+  Graphics for Data Analysis}, Springer-Verlag New York.
+\newline\harvardurl{http://ggplot2.org}
+
+\harvarditem{Wickham \harvardand\ Bryan}{2018}{REX}
+Wickham, H. \harvardand\ Bryan, J.  \harvardyearleft 2018\harvardyearright ,
+  {\em readxl: Read Excel Files}.
+\newblock R package version 1.1.0.
+\newline\harvardurl{https://CRAN.R-project.org/package=readxl}
+
+\harvarditem{Zelaya}{n.d.}{Multi}
+Zelaya, J.~T.  \harvardyearleft n.d.\harvardyearright , {\em ANÁLISIS
+  MULTIVARIADO DE DATOS}, Universidad de Costa Rica.
+
+\end{thebibliography}
