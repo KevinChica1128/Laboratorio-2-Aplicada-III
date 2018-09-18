@@ -237,13 +237,18 @@ ACPEM=function(datos,n,p){
   datos
   L=0
   X0=reempNA(datos,n,p)
-  ZL=matrZ(X0,n,p)
   for (L in 0:100) {
-    VL=ACP_manual(ZL,n,p,2,1)$vectors  #Matriz de vectores propios
-    CL=ACP_manual(ZL,n,p,3,1)          #Componentes principales
-    ZL=CL%*%VL                         #Reconstitucion de la matriz
-  }
-  result=list(VL,CL,X0)
+    VL=ACP_manual(X0,n,p,2,1)$vectors  #Matriz de vectores propios
+    CL=ACP_manual(X0,n,p,3,1)          #Componentes principales
+    ZL=CL%*%VL                         #Reconstitucion de la matriz estandarizada
+    for (j in 1:p) {
+        for (i in 1:n) {
+        CNAcol=count(datos[,j],vars = 'NA')$freq
+        X0[i,j]=ZL[i,j]*(sqrt((n-CNAcol-1)/(n-CNAcol))*sd(datos[,j],na.rm = TRUE))+mean(datos[,j],na.rm = TRUE)
+      }
+    }
+    }
+  result=list(VL,CL,ZL,X0)
   return(result)
 }
 
@@ -256,4 +261,5 @@ ACPEM(importaciones_2,20,6)
 ACPEM(importaciones_3,20,6)
 #**ACP EM matriz al 20%
 ACPEM(importaciones_4,20,6)
+
 
