@@ -232,23 +232,30 @@ reempNA=function(datos,n,p){
   return(X0)
 }
 
+#Función para estandarizar la matriz sin tener en cuenta NAS y con la desviación sobre n
+library('plyr')
+matrZNA=function(datos,n,p){
+  datos
+  #Estandarización
+  Z=datos
+  for(i in 1:p){
+    Z[,i]=(Z[,i]-mean(Z[,i],na.rm = TRUE))/((sqrt((n-count(Z[,i],vars = 'NA')$freq -1)/(n-count(Z[,i],vars = 'NA')$freq)))*sd(Z[,i],na.rm = TRUE))
+      }
+  return(Z)
+}
+
 #Función algoritmo ACP EM
 ACPEM=function(datos,n,p){
   datos
   L=0
-  X0=reempNA(datos,n,p)
-  for (L in 0:100) {
-    VL=ACP_manual(X0,n,p,2,1)$vectors  #Matriz de vectores propios
-    CL=ACP_manual(X0,n,p,3,1)          #Componentes principales
-    ZL=CL%*%VL                         #Reconstitucion de la matriz estandarizada
-    for (j in 1:p) {
-        for (i in 1:n) {
-        CNAcol=count(datos[,j],vars = 'NA')$freq
-        X0[i,j]=ZL[i,j]*(sqrt((n-CNAcol-1)/(n-CNAcol))*sd(datos[,j],na.rm = TRUE))+mean(datos[,j],na.rm = TRUE)
-      }
+  Z=matrZNA(datos,n,p)
+  Z0=reempNA(Z,n,p)
+  for (L in 0:500) {
+    VL=ACP_manual(Z0,n,p,2,1)$vectors  #Matriz de vectores propios
+    CL=ACP_manual(Z0,n,p,3,1)          #Componentes principales
+    Z0=CL%*%VL                         #Reconstitucion de la matriz estandarizada
     }
-    }
-  result=list(VL,CL,ZL,X0)
+  result=list(VL,CL,Z0,Z)
   return(result)
 }
 
@@ -262,4 +269,6 @@ ACPEM(importaciones_3,20,6)
 #**ACP EM matriz al 20%
 ACPEM(importaciones_4,20,6)
 
-
+mean(importaciones_1[,1],na.rm = TRUE)
+sqrt((20-count(importaciones_1[,1],vars = 'NA')$freq -1)/(20-count(importaciones_1[,1],vars = 'NA')$freq))*sd(importaciones_1[,1],na.rm = TRUE)
+sqrt((20-count(importaciones_1[,1],vars = 'NA')$freq)/(20-count(importaciones_1[,1],vars = 'NA')$freq -1))*sd2(importaciones[,1])
