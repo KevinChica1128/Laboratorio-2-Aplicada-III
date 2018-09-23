@@ -7,11 +7,9 @@
 % "\documentclass[english]{revcoles}" o por "\documentclass[portuguese]{revcoles}"
 % **** --------------------------------------------------------------------------------
 \documentclass[report,oneside]{revcoles}
-\usepackage[top=2cm,bottom=1cm]{geometry}
+\usepackage[top=2cm,bottom=1cm,left=2cm,right=2cm]{geometry}
 \labeldocument[
 university = Universidad del Valle,
-faculty = Facultad de Ingeniería,
-department = Escuela de Estadística,
 program = Programa Académico de Estadística,
 subject = Estadística Aplicada III,
 city = Cali,
@@ -160,6 +158,7 @@ Año	& Colombia & Brasil & Chile & Argentina &	Ecuador &	Peru \\
 \end{tabular}
 \end{center}
 
+\pagebreak
 \section{ACP datos completos}
 ~\\En el laboratorio 1 se vio paso por paso la aplicación del ACP, por lo tanto se mostraran solo los resultados obtenidos,es decir, los valores y vectores propios u, y las componentes principales Z$\cdot$ u.
 
@@ -293,29 +292,111 @@ Los valores observados son los mismos y los faltantes se reemplazan por la imput
 \end{itemize}
 
 \subsection{Resultados}
-~\\Los valores propios obtenidos mediante el algoritmo EM-PCA para las matrices con 5,10,15 y 20\% son:
+~\\Los valores propios obtenidos mediante el algoritmo EM-PCA para las matrices con 5,10,15 y 20\% de datos faltantes son:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vlpnipals.png}
+  \includegraphics[scale=0.7]{FigurasUV/vlpacpem.png}
 \end{figure}
 ~\\En cuanto a los vectores propios obtenidos, por cuestiones de espacio, compararemos solo los tres primeros vectores propios de cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vtpnipals.png}
+  \includegraphics[scale=0.7]{FigurasUV/vtpacpem.png}
 \end{figure}
-\pagebreak
+
 ~\\Las componentes principales, también mostraremos las primeras tres para cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/cpnipals.png}
+  \includegraphics[scale=0.7]{FigurasUV/cpacpem.png}
 \end{figure}
 
+\section{Comparaciones}
+\begin{itemize}
+\item[1.]Poder descriptivo en los dos primeros ejes
+~\\El poder descriptivo de las dos primeras componentes para los tres métodos y las matrices generadas con el 5,10,15 y 20\% de datos faltantes se resume en la siguiente tabla:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/podesc.png}
+\end{figure}
+\pagebreak
+\item[2.]Valores propios
+~\\La comparación de los valores propios se puede ver en la siguiente tabla:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.7]{FigurasUV/compvlp.png}
+\end{figure}
+\item[3.]Vectores propios
+~\\La comparación de los dos primeros vectores propios se puede ver en la siguiente tabla:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.63]{FigurasUV/compvtp.png}
+\end{figure}
+\item[4.]Componentes principales
+~\\La comparación de las dos primeras componentes principales se puede ver en la siguiente tabla:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.63]{FigurasUV/compcomp.png}
+\end{figure}
+\pagebreak
+\item[5.]Correlación entre la componente 1 completo y faltantes
+~\\Para comparar estas correlaciones, se obtendrá el valor absoluto de la correlación entre la componente 1 de la matriz completa y la componente 1 de cada una de las matrices incompletas por NIPLALS y por ACP-EM. Se sacará el valor absoluto ya que por cuestiones del código, los signos entre una componente y otra pueden ser iguales o inversos.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.63]{FigurasUV/compcor.png}
+\end{figure}
+\item[6.]Estructura factorial en la nube de individuos
+~\\Para comparar estas estructuras, solo se comparara el ACP con datos completos con el ACP-EM y el NIPALs para la matriz con más datos faltantes (20\% de datos faltantes)
+~\\La nube de individuos correspondiente al ACP de la matriz de datos completos es
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.4]{FigurasUV/nubeindcom.pdf}
+\end{figure}
+
+~\\Las nubes de individuos para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.42]{FigurasUV/nubeindna.pdf}
+\end{figure}
+\pagebreak
+\item[7.]Estructura factorial en la nube de variables
+~\\Para comparar estas estructuras, solo se comparara el ACP con datos completos con el ACP-EM y el NIPALs para la matriz con más datos faltantes (20\% de datos faltantes)
+
+~\\La nube de variables correspondiente al ACP de la matriz de datos completos es
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/nubevarcom.pdf}
+\end{figure}
+
+~\\Las nubes de variables para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/nubevarna.pdf}
+\end{figure}
+
+\pagebreak
+\item[8.]Ortogonalidad en las dos primeras componentes y ortonormalidad en los dos primeros vectores propios
+~\\La ortogonalidad en las dos primeras componentes se puede evidenciar en la siguiente tabla, donde se hizo el producto punto entre la componente 1 y la componente 2
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/ortocom.png}
+\end{figure}
+
+~\\La ortonormalidad en los dos primeros vectores propios se puede ver en la siguiente tabla, donde se obtuvo la norma de cada uno, y posteriormente se hizo su producto punto.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/ortovec.png}
+\end{figure}
+
+\item[9.]Imputación
+
+
+\end{itemize}
 
 
 
 
 
 \setlength{\parskip}{1mm}
+\pagebreak
 ~\\\nocite{REX}
 \nocite{ggp2}
 \nocite{FE}
