@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  22 SEP 2018 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  22 SEP 2018 21:38
 entering extended mode
 **"./Laboratorio 2.tex"
 ("Laboratorio 2.tex"
@@ -558,14 +558,14 @@ File: FigurasUV/compcor.png Graphic file (type png)
 
 <use FigurasUV/compcor.png>
 Package pdftex.def Info: FigurasUV/compcor.png used on input line 344.
-(pdftex.def)             Requested size: 319.66093pt x 38.89047pt.
+(pdftex.def)             Requested size: 405.91705pt x 49.38454pt.
 
 <FigurasUV/nubeindcom.pdf, id=74, 1027.84pt x 545.03625pt>
 File: FigurasUV/nubeindcom.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubeindcom.pdf>
 Package pdftex.def Info: FigurasUV/nubeindcom.pdf used on input line 351.
-(pdftex.def)             Requested size: 411.12872pt x 218.01064pt.
+(pdftex.def)             Requested size: 390.58325pt x 207.11592pt.
 
 <FigurasUV/nubeindna.pdf, id=75, 1027.84pt x 545.03625pt>
 File: FigurasUV/nubeindna.pdf Graphic file (type pdf)
@@ -594,14 +594,18 @@ File: FigurasUV/ortocom.png Graphic file (type png)
 
 <use FigurasUV/ortocom.png>
 Package pdftex.def Info: FigurasUV/ortocom.png used on input line 380.
-(pdftex.def)             Requested size: 286.59306pt x 34.89252pt.
+(pdftex.def)             Requested size: 509.5042pt x 62.03181pt.
+
+Overfull \hbox (9.0202pt too wide) in paragraph at lines 380--381
+ [][] 
+ []
 
 <FigurasUV/ortovec.png, id=98, 565.36218pt x 82.80937pt>
 File: FigurasUV/ortovec.png Graphic file (type png)
 
 <use FigurasUV/ortovec.png>
 Package pdftex.def Info: FigurasUV/ortovec.png used on input line 386.
-(pdftex.def)             Requested size: 254.41063pt x 37.26385pt.
+(pdftex.def)             Requested size: 452.29036pt x 66.24757pt.
  [10 <./FigurasUV/ortocom.png> <./FigurasUV/ortovec.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 400--406
 
@@ -645,7 +649,7 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "Laboratorio 2.pdf" (11 pages, 530682 bytes).
+Output written on "Laboratorio 2.pdf" (11 pages, 530648 bytes).
 PDF statistics:
  503 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

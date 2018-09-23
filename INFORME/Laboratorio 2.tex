@@ -224,7 +224,7 @@ $\lambda_{1}$ & $\lambda_{2}$ & $\lambda_{3}$ & $\lambda_{4}$ & $\lambda_{5}$ & 
   \caption{Esquema del algoritmo NIPALS}\label{figura1}
 \end{figure}
 
-~\\Para desarrollar nuestro código NIPALS en \citeasnoun{R}, nos basamos en el siguiente pseudocódigo propuesto por \citeasnoun{Vic}
+~\\El pseudocódigo de este algoritmo propuesto por \citeasnoun{Vic}, es el siguiente:
 \begin{itemize}
 \item[]Etapa 1. $X_{0}=X_{h}$
 \item[]Etapa 2. $h=1,2,...,a:$
@@ -279,7 +279,7 @@ $P_{hj}=\frac{\sum_{\{i:x_{ji}  \;e   \;t_{hi} \;existen \}}x_{h-1,ji^{t}hi}}{\{
 \subsection{EM-PCA}
 ~\\El método Análisis de Componentes Principales vía EM (ACP-EM), es un método propuesto por Josse and Husson (2012), él cual realiza un Análisis de Componentes principales en presencia de datos faltantes. Particularmente, los datos faltantes son estimados inicialmente por valores promedio y luego se desea minimizar la distancia entre los valores originales (Z) y los valores estimados ($\varPsi u'$). \citeasnoun{Ochoa}
 
-~\\Para realizar nuestro código de este algoritmo en \citeasnoun{R}, seguimos el pseudocódigo propuesto por \citeasnoun{Ochoa}
+~\\Para realizar este algoritmo en \citeasnoun{R}, usamos la función del paquete ade4. El pseudocódigo de este algoritmo propuesto por \citeasnoun{Ochoa} es:
 \begin{itemize}
 \item[1.]Iniciación L=0
 
@@ -341,14 +341,14 @@ Los valores observados son los mismos y los faltantes se reemplazan por la imput
 ~\\Para comparar estas correlaciones, se obtendrá el valor absoluto de la correlación entre la componente 1 de la matriz completa y la componente 1 de cada una de las matrices incompletas por NIPLALS y por ACP-EM. Se sacará el valor absoluto ya que por cuestiones del código, los signos entre una componente y otra pueden ser iguales o inversos.
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.63]{FigurasUV/compcor.png}
+  \includegraphics[scale=0.8]{FigurasUV/compcor.png}
 \end{figure}
 \item[6.]Estructura factorial en la nube de individuos
 ~\\Para comparar estas estructuras, solo se comparara el ACP con datos completos con el ACP-EM y el NIPALs para la matriz con más datos faltantes (20\% de datos faltantes)
 ~\\La nube de individuos correspondiente al ACP de la matriz de datos completos es
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.4]{FigurasUV/nubeindcom.pdf}
+  \includegraphics[scale=0.38]{FigurasUV/nubeindcom.pdf}
 \end{figure}
 
 ~\\Las nubes de individuos para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
@@ -377,13 +377,13 @@ Los valores observados son los mismos y los faltantes se reemplazan por la imput
 ~\\La ortogonalidad en las dos primeras componentes se puede evidenciar en la siguiente tabla, donde se hizo el producto punto entre la componente 1 y la componente 2
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.45]{FigurasUV/ortocom.png}
+  \includegraphics[scale=0.8]{FigurasUV/ortocom.png}
 \end{figure}
 
 ~\\La ortonormalidad en los dos primeros vectores propios se puede ver en la siguiente tabla, donde se obtuvo la norma de cada uno, y posteriormente se hizo su producto punto.
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.45]{FigurasUV/ortovec.png}
+  \includegraphics[scale=0.8]{FigurasUV/ortovec.png}
 \end{figure}
 
 \item[9.]Imputación
