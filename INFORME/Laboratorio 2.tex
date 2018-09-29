@@ -214,9 +214,27 @@ $\lambda_{1}$ & $\lambda_{2}$ & $\lambda_{3}$ & $\lambda_{4}$ & $\lambda_{5}$ & 
 \right)\] 
 
 \section{ACP datos faltantes}
+\subsection{Generación de matrices con datos faltantes}
+~\\Para realizar los algoritmos NIPALS y EM-PCA, generamos NA's de forma aleatoria (se generaron pares de números correspondientes a las filas y columnas de la matriz y se reemplazaron por NA) en la matriz de datos correspondiente a la base de datos dada en la introducción , con 5,10,15, y 20\% de NA's o datos faltantes. Esas matrices son las siguientes:
+
+\pagebreak
+\begin{itemize}
+\item Matrices con el 5\% y 10\% de datos faltantes respectivamente:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.77]{FigurasUV/5y10.png}
+\end{figure}
+
+\item Matrices con el 15\% y 20\% de datos faltantes respectivamente:
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.77]{FigurasUV/15y20.png}
+\end{figure}
+\end{itemize}
+
 \subsection{NIPALS}
 ~\\El algoritmo NIPALS realiza una descomposición singular de una matriz de datos, mediante secuencias iterativas convergentes de proyecciones ortogonales, el cuál utiliza la descomposición derivada del ACP que permite realizar la reconstitución de la matriz con los datos faltantes estimados. \citeasnoun{Vic}.
-
+\pagebreak
 ~\\La siguiente figura es el esquema básico del algoritmo NIPALS
 \begin{figure}[h]
   \centering
@@ -244,36 +262,22 @@ $P_{hj}=\frac{\sum_{\{i:x_{ji}  \;e   \;t_{hi} \;existen \}}x_{h-1,ji^{t}hi}}{\{
 \item[]Fin
 \end{itemize}
 
-~\\Para realizar este algoritmo NIPALS en matrices con datos faltantes, generamos NA's de forma aleatoria (se generaron pares de números correspondientes a las filas y columnas de la matriz y se reemplazaron por NA) en la matriz de datos correspondiente a la base de datos dada en la introducción , con 5,10,15, y 20\% de NA's o datos faltantes. Esas matrices son las siguientes:
-\begin{itemize}
-\item Matrices con el 5\% y 10\% de datos faltantes respectivamente:
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.7]{FigurasUV/5y10.png}
-\end{figure}
-\pagebreak
-\item Matrices con el 15\% y 20\% de datos faltantes respectivamente:
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.7]{FigurasUV/15y20.png}
-\end{figure}
-\end{itemize}
 \subsection{Resultados}
 ~\\Los valores propios obtenidos mediante el algoritmo NIPALS para las matrices con 5,10,15 y 20\% son:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vlpnipals.png}
+  \includegraphics[scale=0.85]{FigurasUV/vlpnipals.png}
 \end{figure}
 ~\\En cuanto a los vectores propios obtenidos, por cuestiones de espacio, compararemos solo los tres primeros vectores propios de cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vtpnipals.png}
+  \includegraphics[scale=0.77]{FigurasUV/vtpnipals.png}
 \end{figure}
 \pagebreak
 ~\\Las componentes principales, también mostraremos las primeras tres para cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/cpnipals.png}
+  \includegraphics[scale=0.82]{FigurasUV/cpnipals.png}
 \end{figure}
 
 \subsection{EM-PCA}
@@ -291,88 +295,91 @@ Los valores observados son los mismos y los faltantes se reemplazan por la imput
 \item[3.]Se repiten el paso 2.1 y 2.2 hasta la convergencia.
 \end{itemize}
 
+\pagebreak
 \subsection{Resultados}
 ~\\Los valores propios obtenidos mediante el algoritmo EM-PCA para las matrices con 5,10,15 y 20\% de datos faltantes son:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vlpacpem.png}
+  \includegraphics[scale=0.72]{FigurasUV/vlpacpem.png}
 \end{figure}
 ~\\En cuanto a los vectores propios obtenidos, por cuestiones de espacio, compararemos solo los tres primeros vectores propios de cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/vtpacpem.png}
+  \includegraphics[scale=0.72]{FigurasUV/vtpacpem.png}
 \end{figure}
-
 ~\\Las componentes principales, también mostraremos las primeras tres para cada matriz:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/cpacpem.png}
+  \includegraphics[scale=0.72]{FigurasUV/cpacpem.png}
 \end{figure}
 
+\pagebreak
 \section{Comparaciones}
 \begin{itemize}
 \item[1.]Poder descriptivo en los dos primeros ejes
 ~\\El poder descriptivo de las dos primeras componentes para los tres métodos y las matrices generadas con el 5,10,15 y 20\% de datos faltantes se resume en la siguiente tabla:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{FigurasUV/podesc.png}
+  \includegraphics[scale=0.8]{FigurasUV/podesc.png}
 \end{figure}
-\pagebreak
+
 \item[2.]Valores propios
 ~\\La comparación de los valores propios se puede ver en la siguiente tabla:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{FigurasUV/compvlp.png}
+  \includegraphics[scale=0.8]{FigurasUV/compvlp.png}
 \end{figure}
 \item[3.]Vectores propios
 ~\\La comparación de los dos primeros vectores propios se puede ver en la siguiente tabla:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.63]{FigurasUV/compvtp.png}
+  \includegraphics[scale=0.72]{FigurasUV/compvtp.png}
 \end{figure}
+\pagebreak
 \item[4.]Componentes principales
 ~\\La comparación de las dos primeras componentes principales se puede ver en la siguiente tabla:
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.63]{FigurasUV/compcomp.png}
+  \includegraphics[scale=0.67]{FigurasUV/compcomp.png}
 \end{figure}
-\pagebreak
+
 \item[5.]Correlación entre la componente 1 completo y faltantes
 ~\\Para comparar estas correlaciones, se obtendrá el valor absoluto de la correlación entre la componente 1 de la matriz completa y la componente 1 de cada una de las matrices incompletas por NIPLALS y por ACP-EM. Se sacará el valor absoluto ya que por cuestiones del código, los signos entre una componente y otra pueden ser iguales o inversos.
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.8]{FigurasUV/compcor.png}
+  \includegraphics[scale=0.75]{FigurasUV/compcor.png}
 \end{figure}
 \item[6.]Estructura factorial en la nube de individuos
 ~\\Para comparar estas estructuras, solo se comparara el ACP con datos completos con el ACP-EM y el NIPALs para la matriz con más datos faltantes (20\% de datos faltantes)
 ~\\La nube de individuos correspondiente al ACP de la matriz de datos completos es
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.38]{FigurasUV/nubeindcom.pdf}
+  \includegraphics[scale=0.37]{FigurasUV/nubeindcom.pdf}
 \end{figure}
 
+\pagebreak
 ~\\Las nubes de individuos para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.42]{FigurasUV/nubeindna.pdf}
+  \includegraphics[scale=0.5]{FigurasUV/nubeindna.pdf}
 \end{figure}
-\pagebreak
+
 \item[7.]Estructura factorial en la nube de variables
 ~\\Para comparar estas estructuras, solo se comparara el ACP con datos completos con el ACP-EM y el NIPALs para la matriz con más datos faltantes (20\% de datos faltantes)
 
 ~\\La nube de variables correspondiente al ACP de la matriz de datos completos es
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.45]{FigurasUV/nubevarcom.pdf}
-\end{figure}
-
-~\\Las nubes de variables para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.45]{FigurasUV/nubevarna.pdf}
+  \includegraphics[scale=0.5]{FigurasUV/nubevarcom.pdf}
 \end{figure}
 
 \pagebreak
+~\\Las nubes de variables para el NIPALS y el ACP-EM con una matriz del 20\% de datos faltantes es respectivamente
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/nubevarna.pdf}
+\end{figure}
+
 \item[8.]Ortogonalidad en las dos primeras componentes y ortonormalidad en los dos primeros vectores propios
 ~\\La ortogonalidad en las dos primeras componentes se puede evidenciar en la siguiente tabla, donde se hizo el producto punto entre la componente 1 y la componente 2
 \begin{figure}[h!]
@@ -386,16 +393,55 @@ Los valores observados son los mismos y los faltantes se reemplazan por la imput
   \includegraphics[scale=0.8]{FigurasUV/ortovec.png}
 \end{figure}
 
+\pagebreak
 \item[9.]Imputación
+~\\Las imputaciones obtenidas con el algoritmo NIPALS y el algoritmo EM-PCA para la matriz generada con el 20\% de datos faltantes es respectivamente
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.8]{FigurasUV/imput.png}
+\end{figure}
+
+\item[10.]RV de scouffier
+~\\En la siguiente tabla podemos ver el coeficiente RV de scouffier para cada matriz con datos faltantes imputada por los dos métodos (NIPALS y EM-PCA)
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.8]{FigurasUV/RV.png}
+\end{figure}
 
 
+\item[11.]Indice en presencia de datos faltantes
+~\\Se mostraran tres indices, el indice original llevando a cabo el ACP de la matriz completa, y los dos indices correspondientes a los métodos NIPALS y EM-PCA a la matriz con 20\% de datos faltantes.
+
+~\\El indice que obtenemos del ACP con datos completos es:
+$$I=0.4837847 Colombia+0.2352724 Brasil + 0.5008368 Chile +0.4292863 Argentina+0.8085448 Ecuador$$
+$$+0.9028508 Peru$$
+
+~\\El indice que obtenemos con el NIPALS para la matriz con el 20\% de datos faltantes es:
+$$I=0.78635001Colombia+  0.05424095Brasil  +0.69170650Chile+  1.02219932Argentina + 0.68480831Ecuador  $$
+$$+0.63023740 Peru$$
+
+~\\El indice que obtenemos con el EM-PCA para la matriz con el 20\% de datos faltantes es:
+$$I=0.4418657Colombia+ 0.3698878Brasil +0.7583750Chile +0.4799118 Argentina +0.8762652 Ecuador $$
+$$+0.89850185 Peru$$
 \end{itemize}
 
+\section{Conclusiones}
+\begin{itemize}
+\item Con respecto a la comparación del poder descriptivo de los dos primeros ejes, ambos métodos tienen la incongruencia de que entre más datos faltantes tiene la matriz, mayor poder descriptivo tienen las dos primeras componentes.
+\item Con respecto a la comparación de los valores propios, se pudo observar en la tabla, que en las matrices del 5\% y 10\%, ambos métodos generan valores propios parecidos a los del ACP con la matriz completa, de ahí en adelante, los valores propios muestran una diferencia mayor e ambos métodos.
+\item En cuanto a los vectores propios, en general son más parecidos o más cercanos los del método EM-PCA que los del método NIPALS, con respecto a los vectores propios del ACP con la matriz completa.
+\item En cuanto a la comparación de la componente 1 con los datos completos y la componente 1 para cada matriz con datos faltantes por los dos métodos, ambos métodos presentan una alta correlación en las matrices con el 5,10 y 20\%, con respecto a la matriz con el 15\% de datos faltantes, se comporta mejor el NIPALS, en cuanto a la primera componente.
+\item Observando la estructura factorial de la nube de individuos, comparamos los dos métodos aplicándolos a la matriz del 20\% de datos faltantes, y se puede observar que el método EM-PCA nos da una mejor aproximación a la nube con datos completos.
+\item Con respecto a la nube de variables, también se compararon las estructuras del ACP para la matriz completa, y los dos métodos para la matriz con el 20\% de NA's. Podemos observar que el método EM-PCA nos genera mejores resultados, ya que mantiene casi la misma estructura en la nube de variables que el ACP para datos completos.
+\item Con respecto a la ortogonalidad en las componentes, en la tabla se puede observar que las primeras dos componentes mantienen la ortogonalidad para las 4 matrices con datos faltantes en el método EM-PCA, todo lo contrario ocurre con el NIPALS, donde se observa que en ninguna de las 4 matrices mantiene la ortogonalidad en dichas componentes.
+\item Con respecto a la ortonormalidad en los dos primeros vectores propios, todos son de norma 1 en ambos algoritmos para todas las matrices, pero la ortogonalidad no se cumple en ninguna de las matrices por el método NIPALS.
+\item Observando las matrices imputadas con el 20\% de datos faltantes por los dos algoritmos, se ve claramente que es mejor la imputación del método EM-PCA, ya que este mantiene los valores originales y solo estima los faltantes, en cambio el algoritmo NIPALS en sus iteraciones va modificando no solo los faltantes sino también todos los demás, por lo que al final se obtienen valores distintos en toda la matriz imputada.
+\item Viendo la tabla del coeficiente RV para la imputación por ambos métodos para las matrices con los valores faltantes generados, se pued eobservar que en todos los porcentajes, la correlación entre las matrices imputadas con la original es mayor en el método EM-PCA, la razón es la misma dada en el item anterior.
+\item Finalmente, en cuanto a los indices construidos por los dos métodos para la matriz con el 20\% de datos faltantes, vemos que los coeficientes de cada variable son más parecidos en el método EM-PCA que el los obtenidos por el método NIPALS. Por lo tanto el indice en general, va a ser más cercano el del método EM-PCA que el del NIPALS.
 
+~\\\textbf{Teniendo en cuenta todas las conclusiones dadas anteriormente, podemos concluir que para las 4 matrices generadas con los datos faltantes, tiene mejor comportamiento en todos los aspectos el algoritmo EM-PCA que el algoritmo NIPALS.}
+\end{itemize}
 
-
-
-\setlength{\parskip}{1mm}
 \pagebreak
 ~\\\nocite{REX}
 \nocite{ggp2}

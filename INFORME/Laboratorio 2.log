@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  22 SEP 2018 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  29 SEP 2018 17:25
 entering extended mode
 **"./Laboratorio 2.tex"
 ("Laboratorio 2.tex"
@@ -448,184 +448,234 @@ LaTeX Warning: Characters dropped after `\end{comment}' on input line 124.
 [1
 
 {C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<FigurasUV/N.png, id=13, 462.97969pt x 152.06813pt>
-File: FigurasUV/N.png Graphic file (type png)
- <use FigurasUV/N.png>
-Package pdftex.def Info: FigurasUV/N.png used on input line 223.
-(pdftex.def)             Requested size: 277.78995pt x 91.24158pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 249.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 222.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
 
-<FigurasUV/5y10.png, id=25, 642.90187pt x 344.03531pt>
+<FigurasUV/5y10.png, id=23, 642.90187pt x 344.03531pt>
 File: FigurasUV/5y10.png Graphic file (type png)
 
 <use FigurasUV/5y10.png>
-Package pdftex.def Info: FigurasUV/5y10.png used on input line 252.
-(pdftex.def)             Requested size: 450.02824pt x 240.82307pt.
- [3 <./FigurasUV/N.png> <./FigurasUV/5y10.png>]
-<FigurasUV/15y20.png, id=38, 639.89063pt x 338.01282pt>
+Package pdftex.def Info: FigurasUV/5y10.png used on input line 225.
+(pdftex.def)             Requested size: 495.03596pt x 264.908pt.
+
+<FigurasUV/15y20.png, id=25, 639.89063pt x 338.01282pt>
 File: FigurasUV/15y20.png Graphic file (type png)
 
 <use FigurasUV/15y20.png>
-Package pdftex.def Info: FigurasUV/15y20.png used on input line 258.
-(pdftex.def)             Requested size: 447.92038pt x 236.60735pt.
+Package pdftex.def Info: FigurasUV/15y20.png used on input line 231.
+(pdftex.def)             Requested size: 492.7173pt x 260.27066pt.
+ <FigurasUV/N.png, id=26, 462.97969pt x 152.06813pt>
+File: FigurasUV/N.png Graphic file (type png)
 
-<FigurasUV/vlpnipals.png, id=39, 484.05844pt x 82.80937pt>
+<use FigurasUV/N.png>
+Package pdftex.def Info: FigurasUV/N.png used on input line 241.
+(pdftex.def)             Requested size: 277.78995pt x 91.24158pt.
+ [3 <./FigurasUV/5y10.png> <./FigurasUV/15y20.png>]
+<FigurasUV/vlpnipals.png, id=32, 484.05844pt x 82.80937pt>
 File: FigurasUV/vlpnipals.png Graphic file (type png)
 
 <use FigurasUV/vlpnipals.png>
-Package pdftex.def Info: FigurasUV/vlpnipals.png used on input line 265.
-(pdftex.def)             Requested size: 338.8386pt x 57.96616pt.
+Package pdftex.def Info: FigurasUV/vlpnipals.png used on input line 269.
+(pdftex.def)             Requested size: 411.45161pt x 70.38828pt.
 
-<FigurasUV/vtpnipals.png, id=40, 701.62125pt x 131.74219pt>
+<FigurasUV/vtpnipals.png, id=33, 701.62125pt x 131.74219pt>
 File: FigurasUV/vtpnipals.png Graphic file (type png)
 
 <use FigurasUV/vtpnipals.png>
-Package pdftex.def Info: FigurasUV/vtpnipals.png used on input line 270.
-(pdftex.def)             Requested size: 491.13152pt x 92.21889pt.
+Package pdftex.def Info: FigurasUV/vtpnipals.png used on input line 274.
+(pdftex.def)             Requested size: 540.25002pt x 101.44179pt.
 
-<FigurasUV/cpnipals.png, id=41, 612.78937pt x 353.82187pt>
-File: FigurasUV/cpnipals.png Graphic file (type png)
-
-<use FigurasUV/cpnipals.png>
-Package pdftex.def Info: FigurasUV/cpnipals.png used on input line 276.
-(pdftex.def)             Requested size: 428.94963pt x 247.67361pt.
- [4 <./FigurasUV/15y20.png> <./FigurasUV/vlpnipals.png> <./FigurasUV/vtpnipals.
-png>]
-<FigurasUV/vlpacpem.png, id=48, 481.04718pt x 84.315pt>
-File: FigurasUV/vlpacpem.png Graphic file (type png)
-
-<use FigurasUV/vlpacpem.png>
-Package pdftex.def Info: FigurasUV/vlpacpem.png used on input line 298.
-(pdftex.def)             Requested size: 336.73073pt x 59.02008pt.
-
-<FigurasUV/vtpacpem.png, id=49, 706.89093pt x 130.98938pt>
-File: FigurasUV/vtpacpem.png Graphic file (type png)
-
-<use FigurasUV/vtpacpem.png>
-Package pdftex.def Info: FigurasUV/vtpacpem.png used on input line 303.
-(pdftex.def)             Requested size: 494.82028pt x 91.69193pt.
- [5 <./FigurasUV/cpnipals.png> <./FigurasUV/vlpacpem.png>] <FigurasUV/cpacpem.p
-ng, id=55, 685.05937pt x 354.57469pt>
-File: FigurasUV/cpacpem.png Graphic file (type png)
-
-<use FigurasUV/cpacpem.png>
-Package pdftex.def Info: FigurasUV/cpacpem.png used on input line 309.
-(pdftex.def)             Requested size: 479.53828pt x 248.20059pt.
-
-<FigurasUV/podesc.png, id=56, 568.37344pt x 70.01157pt>
-File: FigurasUV/podesc.png Graphic file (type png)
-
-<use FigurasUV/podesc.png>
-Package pdftex.def Info: FigurasUV/podesc.png used on input line 318.
-(pdftex.def)             Requested size: 284.18602pt x 35.00569pt.
- [6 <./FigurasUV/vtpacpem.png> <./FigurasUV/cpacpem.png> <./FigurasUV/podesc.pn
-g>]
-<FigurasUV/compvlp.png, id=63, 405.01312pt x 161.85469pt>
-File: FigurasUV/compvlp.png Graphic file (type png)
-
-<use FigurasUV/compvlp.png>
-Package pdftex.def Info: FigurasUV/compvlp.png used on input line 325.
-(pdftex.def)             Requested size: 283.50723pt x 113.2975pt.
-
-<FigurasUV/compvtp.png, id=64, 756.57657pt x 149.05687pt>
-File: FigurasUV/compvtp.png Graphic file (type png)
-
-<use FigurasUV/compvtp.png>
-Package pdftex.def Info: FigurasUV/compvtp.png used on input line 331.
-(pdftex.def)             Requested size: 476.64577pt x 93.90631pt.
-
-<FigurasUV/compcomp.png, id=65, 791.95876pt x 371.13657pt>
-File: FigurasUV/compcomp.png Graphic file (type png)
-
-<use FigurasUV/compcomp.png>
-Package pdftex.def Info: FigurasUV/compcomp.png used on input line 337.
-(pdftex.def)             Requested size: 498.93666pt x 233.81726pt.
- [7 <./FigurasUV/compvlp.png> <./FigurasUV/compvtp.png> <./FigurasUV/compcomp.p
-ng>]
-<FigurasUV/compcor.png, id=73, 507.39563pt x 61.73062pt>
-File: FigurasUV/compcor.png Graphic file (type png)
-
-<use FigurasUV/compcor.png>
-Package pdftex.def Info: FigurasUV/compcor.png used on input line 344.
-(pdftex.def)             Requested size: 405.91705pt x 49.38454pt.
-
-<FigurasUV/nubeindcom.pdf, id=74, 1027.84pt x 545.03625pt>
-File: FigurasUV/nubeindcom.pdf Graphic file (type pdf)
-
-<use FigurasUV/nubeindcom.pdf>
-Package pdftex.def Info: FigurasUV/nubeindcom.pdf used on input line 351.
-(pdftex.def)             Requested size: 390.58325pt x 207.11592pt.
-
-<FigurasUV/nubeindna.pdf, id=75, 1027.84pt x 545.03625pt>
-File: FigurasUV/nubeindna.pdf Graphic file (type pdf)
-
-<use FigurasUV/nubeindna.pdf>
-Package pdftex.def Info: FigurasUV/nubeindna.pdf used on input line 357.
-(pdftex.def)             Requested size: 431.68987pt x 228.91367pt.
- [8 <./FigurasUV/compcor.png> <./FigurasUV/nubeindcom.pdf> <./FigurasUV/nubeind
-na.pdf>]
-<FigurasUV/nubevarcom.pdf, id=86, 1027.84pt x 545.03625pt>
-File: FigurasUV/nubevarcom.pdf Graphic file (type pdf)
-
-<use FigurasUV/nubevarcom.pdf>
-Package pdftex.def Info: FigurasUV/nubevarcom.pdf used on input line 366.
-(pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
-
-<FigurasUV/nubevarna.pdf, id=87, 1027.84pt x 545.03625pt>
-File: FigurasUV/nubevarna.pdf Graphic file (type pdf)
-
-<use FigurasUV/nubevarna.pdf>
-Package pdftex.def Info: FigurasUV/nubevarna.pdf used on input line 372.
-(pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
- [9 <./FigurasUV/nubevarcom.pdf> <./FigurasUV/nubevarna.pdf>] <FigurasUV/ortoco
-m.png, id=97, 636.87938pt x 77.53969pt>
-File: FigurasUV/ortocom.png Graphic file (type png)
-
-<use FigurasUV/ortocom.png>
-Package pdftex.def Info: FigurasUV/ortocom.png used on input line 380.
-(pdftex.def)             Requested size: 509.5042pt x 62.03181pt.
-
-Overfull \hbox (9.0202pt too wide) in paragraph at lines 380--381
+Overfull \hbox (39.76602pt too wide) in paragraph at lines 274--275
  [][] 
  []
 
-<FigurasUV/ortovec.png, id=98, 565.36218pt x 82.80937pt>
+<FigurasUV/cpnipals.png, id=34, 612.78937pt x 353.82187pt>
+File: FigurasUV/cpnipals.png Graphic file (type png)
+
+<use FigurasUV/cpnipals.png>
+Package pdftex.def Info: FigurasUV/cpnipals.png used on input line 280.
+(pdftex.def)             Requested size: 502.49054pt x 290.1358pt.
+
+Overfull \hbox (2.00655pt too wide) in paragraph at lines 280--281
+ [][] 
+ []
+
+[4 <./FigurasUV/N.png> <./FigurasUV/vlpnipals.png> <./FigurasUV/vtpnipals.png>]
+[5 <./FigurasUV/cpnipals.png>]
+<FigurasUV/vlpacpem.png, id=52, 481.04718pt x 84.315pt>
+File: FigurasUV/vlpacpem.png Graphic file (type png)
+
+<use FigurasUV/vlpacpem.png>
+Package pdftex.def Info: FigurasUV/vlpacpem.png used on input line 303.
+(pdftex.def)             Requested size: 346.3537pt x 60.70673pt.
+
+<FigurasUV/vtpacpem.png, id=53, 706.89093pt x 130.98938pt>
+File: FigurasUV/vtpacpem.png Graphic file (type png)
+
+<use FigurasUV/vtpacpem.png>
+Package pdftex.def Info: FigurasUV/vtpacpem.png used on input line 308.
+(pdftex.def)             Requested size: 508.96109pt x 94.31227pt.
+
+Overfull \hbox (8.4771pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+<FigurasUV/cpacpem.png, id=54, 685.05937pt x 354.57469pt>
+File: FigurasUV/cpacpem.png Graphic file (type png)
+
+<use FigurasUV/cpacpem.png>
+Package pdftex.def Info: FigurasUV/cpacpem.png used on input line 313.
+(pdftex.def)             Requested size: 493.24237pt x 255.29358pt.
+ [6 <./FigurasUV/vlpacpem.png> <./FigurasUV/vtpacpem.png> <./FigurasUV/cpacpem.
+png>]
+<FigurasUV/podesc.png, id=61, 568.37344pt x 70.01157pt>
+File: FigurasUV/podesc.png Graphic file (type png)
+
+<use FigurasUV/podesc.png>
+Package pdftex.def Info: FigurasUV/podesc.png used on input line 323.
+(pdftex.def)             Requested size: 454.69937pt x 56.00931pt.
+
+<FigurasUV/compvlp.png, id=62, 405.01312pt x 161.85469pt>
+File: FigurasUV/compvlp.png Graphic file (type png)
+
+<use FigurasUV/compvlp.png>
+Package pdftex.def Info: FigurasUV/compvlp.png used on input line 330.
+(pdftex.def)             Requested size: 324.01093pt x 129.4839pt.
+
+<FigurasUV/compvtp.png, id=63, 756.57657pt x 149.05687pt>
+File: FigurasUV/compvtp.png Graphic file (type png)
+
+<use FigurasUV/compvtp.png>
+Package pdftex.def Info: FigurasUV/compvtp.png used on input line 336.
+(pdftex.def)             Requested size: 544.73471pt x 107.32086pt.
+
+Overfull \hbox (44.25072pt too wide) in paragraph at lines 336--337
+ [][] 
+ []
+
+[7 <./FigurasUV/podesc.png> <./FigurasUV/compvlp.png> <./FigurasUV/compvtp.png>
+] <FigurasUV/compcomp.png, id=71, 791.95876pt x 371.13657pt>
+File: FigurasUV/compcomp.png Graphic file (type png)
+
+<use FigurasUV/compcomp.png>
+Package pdftex.def Info: FigurasUV/compcomp.png used on input line 343.
+(pdftex.def)             Requested size: 530.60962pt x 248.6602pt.
+
+Overfull \hbox (30.12563pt too wide) in paragraph at lines 343--344
+ [][] 
+ []
+
+<FigurasUV/compcor.png, id=72, 507.39563pt x 61.73062pt>
+File: FigurasUV/compcor.png Graphic file (type png)
+
+<use FigurasUV/compcor.png>
+Package pdftex.def Info: FigurasUV/compcor.png used on input line 350.
+(pdftex.def)             Requested size: 380.54579pt x 46.29784pt.
+
+<FigurasUV/nubeindcom.pdf, id=73, 1027.84pt x 545.03625pt>
+File: FigurasUV/nubeindcom.pdf Graphic file (type pdf)
+
+<use FigurasUV/nubeindcom.pdf>
+Package pdftex.def Info: FigurasUV/nubeindcom.pdf used on input line 357.
+(pdftex.def)             Requested size: 380.29485pt x 201.66025pt.
+ [8 <./FigurasUV/compcomp.png> <./FigurasUV/compcor.png> <./FigurasUV/nubeindco
+m.pdf>]
+<FigurasUV/nubeindna.pdf, id=82, 1027.84pt x 545.03625pt>
+File: FigurasUV/nubeindna.pdf Graphic file (type pdf)
+
+<use FigurasUV/nubeindna.pdf>
+Package pdftex.def Info: FigurasUV/nubeindna.pdf used on input line 364.
+(pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
+
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 364--365
+ [][] 
+ []
+
+<FigurasUV/nubevarcom.pdf, id=83, 1027.84pt x 545.03625pt>
+File: FigurasUV/nubevarcom.pdf Graphic file (type pdf)
+
+<use FigurasUV/nubevarcom.pdf>
+Package pdftex.def Info: FigurasUV/nubevarcom.pdf used on input line 373.
+(pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
+
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 373--374
+ [][] 
+ []
+
+[9 <./FigurasUV/nubeindna.pdf> <./FigurasUV/nubevarcom.pdf>]
+<FigurasUV/nubevarna.pdf, id=93, 1027.84pt x 545.03625pt>
+File: FigurasUV/nubevarna.pdf Graphic file (type pdf)
+
+<use FigurasUV/nubevarna.pdf>
+Package pdftex.def Info: FigurasUV/nubevarna.pdf used on input line 380.
+(pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
+
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 380--381
+ [][] 
+ []
+
+<FigurasUV/ortocom.png, id=94, 636.87938pt x 77.53969pt>
+File: FigurasUV/ortocom.png Graphic file (type png)
+
+<use FigurasUV/ortocom.png>
+Package pdftex.def Info: FigurasUV/ortocom.png used on input line 387.
+(pdftex.def)             Requested size: 509.5042pt x 62.03181pt.
+
+Overfull \hbox (9.0202pt too wide) in paragraph at lines 387--388
+ [][] 
+ []
+
+<FigurasUV/ortovec.png, id=95, 565.36218pt x 82.80937pt>
 File: FigurasUV/ortovec.png Graphic file (type png)
 
 <use FigurasUV/ortovec.png>
-Package pdftex.def Info: FigurasUV/ortovec.png used on input line 386.
+Package pdftex.def Info: FigurasUV/ortovec.png used on input line 393.
 (pdftex.def)             Requested size: 452.29036pt x 66.24757pt.
- [10 <./FigurasUV/ortocom.png> <./FigurasUV/ortovec.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 400--406
+ [10 <./FigurasUV/nubevarna.pdf> <./FigurasUV/ortocom.png> <./FigurasUV/ortovec
+.png>]
+<FigurasUV/imput.png, id=104, 671.50874pt x 335.00156pt>
+File: FigurasUV/imput.png Graphic file (type png)
+
+<use FigurasUV/imput.png>
+Package pdftex.def Info: FigurasUV/imput.png used on input line 401.
+(pdftex.def)             Requested size: 537.20773pt x 268.0016pt.
+
+Overfull \hbox (36.72374pt too wide) in paragraph at lines 401--402
+ [][] 
+ []
+
+<FigurasUV/RV.png, id=105, 533.74406pt x 65.49469pt>
+File: FigurasUV/RV.png Graphic file (type png)
+ <use FigurasUV/RV.png>
+Package pdftex.def Info: FigurasUV/RV.png used on input line 408.
+(pdftex.def)             Requested size: 426.99582pt x 52.3958pt.
+
+[11 <./FigurasUV/imput.png> <./FigurasUV/RV.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 446--452
 
  []
 
-("Laboratorio 2.bbl") [11] ("Laboratorio 2.aux"
+("Laboratorio 2.bbl") [13] ("Laboratorio 2.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5896 strings out of 493334
- 82923 string characters out of 3139234
- 165248 words of memory out of 3000000
- 9278 multiletter control sequences out of 15000+200000
+ 5906 strings out of 493334
+ 83116 string characters out of 3139234
+ 164248 words of memory out of 3000000
+ 9286 multiletter control sequences out of 15000+200000
  21801 words of font info for 61 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  43i,8n,40p,977b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
+dpi600\ecti1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
 2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc0900.pk> <C:\Users\KEVINSTEVEN\AppDa
 ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\K
 EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900
@@ -649,9 +699,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "Laboratorio 2.pdf" (11 pages, 530648 bytes).
+Output written on "Laboratorio 2.pdf" (13 pages, 602368 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
+ 557 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

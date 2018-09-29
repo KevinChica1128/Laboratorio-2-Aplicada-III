@@ -299,10 +299,10 @@ library(missMDA)
 #PCAEM Matriz del 5% de NA
 ## Validación cruzada para elegir el número de ejes..
 ?estim_ncpPCA
-nb5 <- estim_ncpPCA(importaciones_1,ncp.max=6,method = 'EM')
+nb5 <- estim_ncpPCA(importaciones_1,ncp.max=6,method=c("Regularized","EM"),method.cv = c("gcv","loo","Kfold"))
 ## Imputación
 imp5NA<-imputePCA(data.frame(importaciones_1),ncp=2)
-imp5NA$completeObs
+impu5NA<-imp5NA$completeObs
 ?imputePCA
 ## ACP Impute ade4
 pca.em5 <- dudi.pca(imp5NA$completeObs,nf=3,scannf = FALSE)
@@ -318,7 +318,7 @@ pca.em5$tab #Matriz modificada
 nb10 <- estim_ncpPCA(importaciones_2,ncp.max=6)
 ## Imputación
 imp10NA<-imputePCA(data.frame(importaciones_2),ncp=2)
-imp10NA$completeObs
+impu10NA<-imp10NA$completeObs
 ?imputePCA
 ## ACP Impute ade4
 pca.em10 <- dudi.pca(imp10NA$completeObs,nf=3,scannf = FALSE)
@@ -334,7 +334,7 @@ pca.em10$tab #Matriz modificada
 nb15 <- estim_ncpPCA(importaciones_3,ncp.max=6,method = 'EM')
 ## Imputación
 imp15NA<-imputePCA(data.frame(importaciones_3),ncp=2)
-imp15NA$completeObs
+impu15NA<-imp15NA$completeObs
 ?imputePCA
 ## ACP Impute ade4
 pca.em15 <- dudi.pca(imp15NA$completeObs,nf=3,scannf = FALSE)
@@ -350,12 +350,12 @@ pca.em15$tab #Matriz modificada
 nb20 <- estim_ncpPCA(importaciones_4,ncp.max=6,method = 'EM')
 ## Imputación
 imp20NA<-imputePCA(data.frame(importaciones_4),ncp=2)
-imp20NA$completeObs
+impu20NA<-imp20NA$completeObs
 ?imputePCA
 ## ACP Impute ade4
 pca.em20 <- dudi.pca(imp20NA$completeObs,nf=3,scannf = FALSE)
 pca.em20$li #Componentes principales individuos
-pca.em20$co #Componentes principales variables
+t(pca.em20$co) #Componentes principales variables
 pca.em20$c1 #Vectores propios
 pca.em20$eig #Valores propios
 pca.em20$tab #Matriz modificada
@@ -394,7 +394,6 @@ s.label(pca.em20$li,boxes=FALSE) ## Nube de individuos ACP-EM 20% NA
 rbind()
 x11()
 s.corcircle(-acpnipals$co)
-
 circulonipals20NA<-cbind(acpnipals20NA$co[,1],-acpnipals20NA$co[,2])
 circuloacpem20NA<-cbind(-pca.em20$co[,1],-pca.em20$co[,2])
 rownames(circuloacpem20NA)<-c("Colombia","Brasil","Chile","Argentina","Ecuador","Peru")
@@ -445,10 +444,43 @@ t(pca.em10$c1[,1])%*%pca.em10$c1[,2] #ACP-EM 10%
 t(pca.em15$c1[,1])%*%pca.em15$c1[,2] #ACP-EM 15%
 t(pca.em20$c1[,1])%*%pca.em20$c1[,2] #ACP-EM 20%
 
-#Imputación
-matrZ(importaciones,20,6) #Matriz original estandarizada
-acpnipals20NA$tab
-pca.em20$tab
+#Imputación NIPALS
+#5 % NA´S
+Z5NA<-acpnipals5NA$li %*% acpnipals5NA$c1 #Matriz imputada estandarizada por nipals
+#10 % NA´S
+Z10NA<-acpnipals10NA$li %*% acpnipals10NA$c1 #Matriz imputada estandarizada por nipals
+#15 % NA´S
+Z15NA<-acpnipals15NA$li %*% acpnipals15NA$c1 #Matriz imputada estandarizada por nipals
+#20 % NA´S
+Z20NA<-acpnipals20NA$li %*% acpnipals20NA$c1 #Matriz imputada estandarizada por nipals
 
-dudi.pca
-nipals
+#funcion para volver a la matriz original
+#datos es la matriz a la cual se le va a hacer la desetandaricacion
+#X es la mtriz original
+matrZback=function(datos,X,n,p){
+  datos
+  X
+  #desestandarizacion
+  Z=datos
+  for(i in 1:p){
+    Z[,i]=(Z[,i]*sd2(X[,i]))+mean(X[,i])
+  }
+  
+  return(Z)
+}
+#Matrices originales imptadas nipals
+Orig5NA<-matrZback(Z5NA,importaciones,20,6)
+Orig10NA<-matrZback(Z10NA,importaciones,20,6)
+Orig15NA<-matrZback(Z15NA,importaciones,20,6)
+Orig20NA<-matrZback(Z20NA,importaciones,20,6)
+
+#Comparación coeficiente RV de scouffier
+library('FactoMineR')
+coeffRV(impu5NA,importaciones)  
+coeffRV(impu10NA,importaciones)
+coeffRV(impu15NA,importaciones)
+coeffRV(impu20NA,importaciones)
+coeffRV(Orig5NA,importaciones)
+coeffRV(Orig10NA,importaciones)
+coeffRV(Orig15NA,importaciones)
+coeffRV(Orig20NA,importaciones)
